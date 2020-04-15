@@ -138,7 +138,7 @@ def mars_hmp_imgs():
 # == Gather all Mars information from websites ==
 def scrape():
     # Call ALL functions
-    # Dict to save data
+    # Dict to save data and update it
     mars_data = {}
     dict_news = mars_news()
     mars_data.update(dict_news)
