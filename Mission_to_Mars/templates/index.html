@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Mission Information</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+    <!-- Nav bar -->
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Mission to Mars</h1>
+        <p class="lead">Get to know more about our red neighbor planet!</p>
+        <hr class="my-4">
+        <a class="btn btn-info btn-lg" href="/scrape" role="button">Press and Wait to Scrap Data</a>
+      </div>
+    
+    <!-- THE news -->
+    <div class="col-md-12">
+        <h3> Latest Mars News </h3>
+        <hr>
+        <!-- Here I get the first/second new in my thing dict-->
+        <h5> {{ mars_data.news_title }} </h5>
+        <p>
+            {{ mars_data.news_prg }}
+        </p>
+        <h5> {{ mars_data.news_title2 }} </h5>
+        <p>
+            {{ mars_data.news_prg2 }}
+        </p>
+        <hr>
+    </div>
+        <!-- Block with image and aside objects -->
+        <div class='container-fluid'>
+
+            <div class="row justify-content-md-center">
+                <div class="col-md-6">
+                    <div class="box">
+                        <h3>Feature Mars Image</h3>
+                        <figure class="figure" >
+                            <img src=" {{ mars_data.img_src }} " class="figure-img img-fluid rounded" alt="homefig">
+                            <figcaption class="figure-caption">{{ mars_data.img_title }}</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            
+                <!-- Block with tweet and table Facts -->
+                <div class="col-md-4 text-center">
+                <!-- Mi tweet-->
+                    <div id="visual"class="box">
+                        <div class="card border-dark mb-3" style="width: 25rem;">
+                            <div class="card-header"> <strong>Current Weather on Mars</strong></div>
+                                <div class="card-body text-dark">
+                                    <p class="card-text"> {{ mars_data.tweet}} </p>  
+                                </div>
+                            </div>
+                        </div>  
+         
+                    <!-- Marssssss factsssssss-->
+                        <div id="visual"class="box">
+                            <div class="card border-dark mb-3" style="width: 25rem; height: auto;">
+                                <div class="card-header"> <h3><strong>Mars Facts</strong></div></h3>
+                                    {% include 'mars_facts.html' %}
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    
+    
+
+    <!-- Mis hemisferios :3 -->
+    <div class="col-md-12 text-center">
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col mb-4">
+                <div class="card">
+                    <img src=" {{ mars_data.src_hmp1 }} " class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ mars_data.title_hmp1 }} </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src=" {{ mars_data.src_hmp2 }} " class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ mars_data.title_hmp2 }} </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src=" {{ mars_data.src_hmp3 }} " class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ mars_data.title_hmp3 }} </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src=" {{ mars_data.src_hmp4 }} " class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ mars_data.title_hmp4 }} </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
