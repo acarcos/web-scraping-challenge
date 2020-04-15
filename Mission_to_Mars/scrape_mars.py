@@ -1,14 +1,12 @@
-# MongoDB and Flask Application
+# Converting the Jupyter Notebook into a function
+# Each scraping section was separated from the main function
+# which is scrape()
 
 # libraries
 from splinter import Browser
 from bs4 import BeautifulSoup as bs
 import pandas as pd
 import time
-
-# Converting the Jupyter Notebook into a function
-# Each scraping section was separated from the main function
-# which is scrape()
 
 # == Initialize browser ==
 def init_browser():
